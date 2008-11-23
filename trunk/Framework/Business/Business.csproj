@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A07FF5BB-D171-42AE-A318-6800CFA7135F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Young3.FMSearch.Business</RootNamespace>
+    <AssemblyName>FM2009ScoutFrameworkBusiness</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\MemoryAddressAttribute.cs" />
+    <Compile Include="Converters\DateConverter.cs" />
+    <Compile Include="Entities\FMProcess.cs" />
+    <Compile Include="Entities\InGame\BaseObject.cs" />
+    <Compile Include="Entities\InGame\City.cs" />
+    <Compile Include="Entities\InGame\Club.cs" />
+    <Compile Include="Entities\InGame\Continent.cs" />
+    <Compile Include="Entities\InGame\Contract.cs" />
+    <Compile Include="Entities\InGame\Country.cs" />
+    <Compile Include="Entities\InGame\Finance.cs" />
+    <Compile Include="Entities\InGame\Global.cs" />
+    <Compile Include="Entities\InGame\Player.cs" />
+    <Compile Include="Entities\InGame\PlayerSkills.cs" />
+    <Compile Include="Entities\InGame\PositionalSkills.cs" />
+    <Compile Include="Entities\InGame\Stadium.cs" />
+    <Compile Include="Entities\InGame\Staff.cs" />
+    <Compile Include="Entities\InGame\StaffSkills.cs" />
+    <Compile Include="Entities\InGame\Team.cs" />
+    <Compile Include="Entities\MemoryAddresses.cs" />
+    <Compile Include="Entities\ProcessMemoryApi.cs" />
+    <Compile Include="Managers\ObjectManager.cs" />
+    <Compile Include="Managers\ProcessManager.cs" />
+    <Compile Include="Offsets\City.cs" />
+    <Compile Include="Offsets\Club.cs" />
+    <Compile Include="Offsets\Staff.cs" />
+    <Compile Include="Offsets\StaffSkills.cs" />
+    <Compile Include="Offsets\Continent.cs" />
+    <Compile Include="Offsets\Contract.cs" />
+    <Compile Include="Offsets\Country.cs" />
+    <Compile Include="Offsets\Financial.cs" />
+    <Compile Include="Offsets\Player.cs" />
+    <Compile Include="Offsets\PlayerCoach.cs" />
+    <Compile Include="Offsets\Position.cs" />
+    <Compile Include="Offsets\Skill.cs" />
+    <Compile Include="Offsets\Stadium.cs" />
+    <Compile Include="Offsets\Team.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
