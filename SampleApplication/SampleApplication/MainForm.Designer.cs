@@ -42,6 +42,7 @@
             this.ActivePlayerButton.TabIndex = 8;
             this.ActivePlayerButton.Text = "Get active player";
             this.ActivePlayerButton.UseVisualStyleBackColor = true;
+            this.ActivePlayerButton.Click += new System.EventHandler(this.ActivePlayerButton_Click);
             // 
             // MakeCAButton
             // 
@@ -51,6 +52,7 @@
             this.MakeCAButton.TabIndex = 7;
             this.MakeCAButton.Text = "Make all CA 170+ Dutch";
             this.MakeCAButton.UseVisualStyleBackColor = true;
+            this.MakeCAButton.Click += new System.EventHandler(this.MakeCAButton_Click);
             // 
             // LeetPlayers
             // 
@@ -60,6 +62,7 @@
             this.LeetPlayers.TabIndex = 6;
             this.LeetPlayers.Text = "Create 1337 players";
             this.LeetPlayers.UseVisualStyleBackColor = true;
+            this.LeetPlayers.Click += new System.EventHandler(this.LeetPlayers_Click);
             // 
             // ClubsComboBox
             // 
