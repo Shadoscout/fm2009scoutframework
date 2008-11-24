@@ -59,12 +59,12 @@ namespace SampleApplication
 
         private void ActivePlayerButton_Click(object sender, EventArgs e)
         {
-
             try
             {
                 MessageBox.Show(((Player)fmDataContext.ActiveObject).ToString());
             }
             catch { }
         }
+
     }
 }
