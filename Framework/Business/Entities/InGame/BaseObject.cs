@@ -21,7 +21,10 @@ namespace Young3.FMSearch.Business.Entities.InGame
 
             //cast to object, otherwise there will be a LOOOOONG loop
             if (((object)a == null) || ((object)b == null))
-                return false;
+                if ((object)a == null && (object)b == null)
+                    return true;
+                else
+                    return false;
 
             if (a.MemoryAddress == b.MemoryAddress)
                 return true;
@@ -35,7 +38,10 @@ namespace Young3.FMSearch.Business.Entities.InGame
                 return true;
 
             if (((object)a == null) || ((object)b == null))
-                return true;
+                if ((object)a == null && (object)b == null)
+                    return false;
+                else
+                    return true;
 
             if (a.MemoryAddress != b.MemoryAddress)
                 return true;

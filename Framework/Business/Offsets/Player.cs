@@ -33,7 +33,7 @@ namespace Young3.FMSearch.Business.Offsets
         public static int InternationalPrestige = 0xb2;
         public static int LastName = 0x11c;
         public static int Length = 0xba;
-        public static int LoanContractStartsBy = 0x15395e4;
+        public static int LoanContractStartsBy = 0x25000000;
         public static int Morale = 0xd0;
         public static int Nationality = 0x130;
         public static int NationalPrestige = 0xae;
@@ -42,6 +42,7 @@ namespace Young3.FMSearch.Business.Offsets
         public static int PlayerLength = 500;
         public static int PotentialPlayingAbility = 0xb6;
         public static int RecentPlan = 0x108;
+        public static int SecondContractPointer = 0x198;
         public static int SkillsAddress = 8;
         public static int Team = 0x15c;
         public static int TeamAddress = 360;

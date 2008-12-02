@@ -31,13 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FM2009ScoutFrameworkBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FM2009ScoutFrameworkBusiness, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\FMSearch\bin\Debug\FM2009ScoutFrameworkBusiness.dll</HintPath>
+      <HintPath>..\..\Framework\FMSearch\bin\Release\FM2009ScoutFrameworkBusiness.dll</HintPath>
     </Reference>
-    <Reference Include="FM2009ScoutFrameworkInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FM2009ScoutFrameworkInterface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\FMSearch\bin\Debug\FM2009ScoutFrameworkInterface.dll</HintPath>
+      <HintPath>..\..\Framework\FMSearch\bin\Release\FM2009ScoutFrameworkInterface.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -66,6 +66,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

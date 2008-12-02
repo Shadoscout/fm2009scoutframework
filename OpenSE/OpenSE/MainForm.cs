@@ -40,9 +40,6 @@ namespace OpenSE
             ValueLabel.Text = string.Format("{0:N}", player.Value).Replace(",00", "");
             SaleValueLabel.Text = string.Format("{0:N}", player.SaleValue).Replace(",00", "");
             FitnessLabel.Text = player.Fitness.ToString();
-
-            IEnumerable<Club> club = fmDataContext.Clubs.Where(c => c.Name == "Aberdeen");
-            int bla = 0;
         }
 
         public FMDataContext GetDataContext()

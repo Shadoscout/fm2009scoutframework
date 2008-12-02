@@ -14,6 +14,30 @@ namespace Young3.FMSearch.Business.Entities.InGame
        {
        }
 
+
+       public override string ToString()
+       {
+           string baseString = "";
+
+           if (this.Goalkeeper > 15) baseString += "/GK";
+           if (this.Defender > 15) baseString += "/D";
+           if (this.WingBack > 15) baseString += "/WB";
+           if (this.DefensiveMidfielder > 15) baseString += "/DM";
+           if (this.Midfielder > 15) baseString += "/M";
+           if (this.AttackingMidfielder > 15) baseString += "/AM";
+           if (this.Attacker > 15) baseString += "/S";
+
+           baseString += " ";
+
+           if (this.Right > 15) baseString += "R";
+           if (this.Left > 15) baseString += "L";
+           if (this.Centre > 15) baseString += "C";
+
+           baseString = baseString.Substring(1, baseString.Length - 1);
+
+           return baseString;
+       }
+
        public sbyte Attacker
        {
            get
@@ -321,5 +345,6 @@ namespace Young3.FMSearch.Business.Entities.InGame
                ProcessManager.WriteSByte(value, MemoryAddress + PositionOffsets.NewWingBackRight);
            }
        }
+
    }
 }

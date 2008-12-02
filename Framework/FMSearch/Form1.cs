@@ -31,8 +31,11 @@ namespace FMSearch
         private void Form1_Load(object sender, EventArgs e)
         {
             fmDataContext = new FMDataContext();
+
             {
                 this.ClubsComboBox.DataSource = fmDataContext.Clubs.OrderBy(c => c.Name).ToList();
+
+  
             }
         }
 
@@ -66,10 +69,14 @@ namespace FMSearch
 
         private void ActivePlayerButton_Click(object sender, EventArgs e)
         {
-
             try
             {
-                MessageBox.Show(((Player)fmDataContext.ActiveObject).ToString());
+                Player player = ((Player)fmDataContext.ActiveObject);
+                Contract coContract = player.CoContract;
+                Contract loanContract = player.LoanContract;
+               // player.Contract.Club = c;
+               // player.Team = p.Team;
+                int bla = ((Player)fmDataContext.ActiveObject).ID;
             }
             catch { }
         }

@@ -85,15 +85,42 @@ namespace Young3.FMSearch.Business.Entities.InGame
 
         public Contract Contract
         {
-            get { return new Contract(ContractAddress); }
+            get 
+            {
+                int contractAddress = ProcessManager.ReadInt32(ContractAddress);
+                return new Contract(contractAddress); 
+            }
         }
 
-        public Contract SecondContract
+        public Contract CoContract
         {
             get
             {
-                if (SecondContractAddress < 100) return null;
-                else return new Contract(SecondContractAddress);
+                if (SecondContractAddress != 2) return null;
+
+                int coContractAddress = ProcessManager.ReadInt32(ContractAddress + 4);
+                int temp = ProcessManager.ReadInt32(coContractAddress);
+                if (new Contract(coContractAddress).GoalBonus < 100000)
+                {
+                    return new Contract(coContractAddress);
+                }
+                else return null;
+                //else return new Contract(ProcessManager.ReadInt32(SecondContractAddress));
+            }
+        }
+
+        public Contract LoanContract
+        {
+            get
+            {
+                if (SecondContractAddress != 2) return null;
+
+                int coContractAddress = ProcessManager.ReadInt32(ContractAddress + 4);
+                if (new Contract(coContractAddress).GoalBonus >= 100000)
+                {
+                    return new Contract(coContractAddress);
+                }
+                else return null;
             }
         }
 
