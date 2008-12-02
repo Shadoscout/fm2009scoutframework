@@ -24,9 +24,9 @@ namespace Young3.FMSearch.Business.Offsets
         public static int NewDefLeft = 40;
         public static int NewDefMidCentre = 0x2b;
         public static int NewDefRight = 0x2a;
-        public static int NewMidCentre = 0x2e;
+        public static int NewMidCentre = 0x2d;
         public static int NewMidLeft = 0x2c;
-        public static int NewMidRight = 0x2d;
+        public static int NewMidRight = 0x2e;
         public static int NewWingBackLeft = 0x33;
         public static int NewWingBackRight = 0x34;
         public static int Right = 0x25;

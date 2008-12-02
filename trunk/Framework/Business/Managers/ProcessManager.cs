@@ -27,10 +27,15 @@ namespace Young3.FMSearch.Business.Managers
         {
             FMProcess fmProcess = new FMProcess();
             {
-                Process[] processes = Process.GetProcessesByName("fm");
-                if (processes.Length > 0)
+                Process[] fmProcesses = Process.GetProcessesByName("fm");
+                Process[] wsmProcesses = Process.GetProcessesByName("wsm");
+                if (fmProcesses.Length > 0 || wsmProcesses.Length > 0)
                 {
-                    Process activeProcess = processes[0];
+                    Process activeProcess;
+                    if (fmProcesses.Length > 0)
+                        activeProcess = fmProcesses[0];
+                    else
+                        activeProcess = wsmProcesses[0];
 
                     fmProcess.Pointer = ProcessMemoryApi.OpenProcess(0x38, 1, (uint)activeProcess.Id);
                     fmProcess.EndPoint = GetProcessEndPoint(fmProcess.Pointer);

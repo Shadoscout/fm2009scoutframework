@@ -98,19 +98,19 @@ namespace Young3.FMSearch.Business.Managers
             int bytesRead = 0;
 
             //loop thru all the blocks in the FM process
-            for (int indexIncrementer = 4; currentMemoryBlock < ProcessManager.FMProcess.EndPoint; indexIncrementer = 4)
+            for (int indexIncrementer = 1; currentMemoryBlock < ProcessManager.FMProcess.EndPoint; indexIncrementer = 1)
             {
                 byte[] buffer = ProcessManager.ReadProcessMemory(currentMemoryBlock, byteBlockLength, out bytesRead);
                 int index = 0;
                 while (index < (bytesRead - 0x10))
                 {
-                    if ((buffer[index + 3] != 1) || (buffer[index + 7] != 1))
+                    /*if ((buffer[index + 3] != 1) || (buffer[index + 7] != 1))
                     {
-                        index += 4;
+                        index += 1;
                     }
-                    else
+                    else*/
                     {
-                        indexIncrementer = 4;
+                        indexIncrementer = 1;
                         //next block, is playing, staff or playercoach?
                         if ((((buffer[index] == sb[0x18]) && (buffer[index + 1] == sb[0x19])) && (buffer[index + 4] == sb[0x1c])) && (buffer[index + 5] == sb[0x1d]))
                         {

@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 219);
+            this.ClientSize = new System.Drawing.Size(273, 221);
             this.Controls.Add(this.ActivePlayerButton);
             this.Controls.Add(this.MakeCAButton);
             this.Controls.Add(this.LeetPlayers);
